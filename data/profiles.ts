@@ -365,8 +365,8 @@ export const profiles: Profile[] = [
     nameEN: 'The Curious Newcomer',
     taglineDA: 'Du er ny og vil lære hvordan det fungerer',
     taglineEN: 'You are new and want to learn how it works',
-    whoYouAreDA: 'Du er relativt ny til dansk-indonesisk business (eller business networking generelt). Alt er nyt og du vil gerne forstå hvordan det fungerer.',
-    whoYouAreEN: 'You are relatively new to Danish-Indonesian business (or business networking in general). Everything is new and you want to understand how it works.',
+    whoYouAreDA: 'Du er relativt ny til DanCham og dansk-indonesisk business (eller business networking generelt). Alt er nyt og du vil gerne forstå hvordan det fungerer.',
+    whoYouAreEN: 'You are relatively new to DanCham and Danish-Indonesian business (or business networking in general). Everything is new and you want to understand how it works.',
     benefitsDA: [
       'Massiv shortcut på læringskurven (lær fra andres fejl!)',
       'Praktiske svar på konkrete spørgsmål (ikke teoretisk bullshit)',

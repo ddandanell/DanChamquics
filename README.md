@@ -72,7 +72,7 @@ npm start
 5. **The Young Professional Explorer** - Early career, learning phase
 6. **The Institutional Connector** - Embassy/Trade Council representative
 7. **The Veteran Guide** - Experienced professional giving back
-8. **The Curious Newcomer** - New to Danish-Indonesian business
+8. **The Curious Newcomer** - New to DanCham
 
 ## 🌟 Key Animations
 

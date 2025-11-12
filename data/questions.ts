@@ -315,13 +315,13 @@ export const quizQuestions: Question[] = [
         direction: "Bandung, West Java, tech hub"
       },
       {
-        id: "bali",
-        icon: "🏝️",
-        titleDA: "Bali",
-        titleEN: "Bali",
-        subtitleDA: "Turisme, hospitality og digital nomader",
-        subtitleEN: "Tourism, hospitality and digital nomads",
-        direction: "Bali, tourism, lifestyle"
+        id: "medan",
+        icon: "�",
+        titleDA: "Medan",
+        titleEN: "Medan",
+        subtitleDA: "Nord Sumatra - handel og landbrug",
+        subtitleEN: "North Sumatra - trade and agriculture",
+        direction: "Medan, Sumatra, agriculture"
       },
       {
         id: "semarang",
@@ -333,13 +333,13 @@ export const quizQuestions: Question[] = [
         direction: "Semarang, Central Java, logistics"
       },
       {
-        id: "medan",
-        icon: "🌴",
-        titleDA: "Medan",
-        titleEN: "Medan",
-        subtitleDA: "Nord Sumatra - handel og landbrug",
-        subtitleEN: "North Sumatra - trade and agriculture",
-        direction: "Medan, Sumatra, agriculture"
+        id: "bali",
+        icon: "�️",
+        titleDA: "Bali",
+        titleEN: "Bali",
+        subtitleDA: "Turisme, hospitality og digital nomader",
+        subtitleEN: "Tourism, hospitality and digital nomads",
+        direction: "Bali, tourism, lifestyle"
       },
       {
         id: "makassar",
@@ -360,8 +360,17 @@ export const quizQuestions: Question[] = [
         direction: "Palembang, Sumatra, energy"
       },
       {
+        id: "solo",
+        icon: "�",
+        titleDA: "Solo (Surakarta)",
+        titleEN: "Solo (Surakarta)",
+        subtitleDA: "Central Java - kultur og batik",
+        subtitleEN: "Central Java - culture and batik",
+        direction: "Solo, Surakarta, culture, batik"
+      },
+      {
         id: "yogyakarta",
-        icon: "🏛️",
+        icon: "�️",
         titleDA: "Yogyakarta",
         titleEN: "Yogyakarta",
         subtitleDA: "Kulturelt centrum og uddannelse",
@@ -369,98 +378,8 @@ export const quizQuestions: Question[] = [
         direction: "Yogyakarta, culture, education"
       },
       {
-        id: "balikpapan",
-        icon: "🏗️",
-        titleDA: "Balikpapan",
-        titleEN: "Balikpapan",
-        subtitleDA: "Øst Kalimantan - olie og gas",
-        subtitleEN: "East Kalimantan - oil and gas",
-        direction: "Balikpapan, Kalimantan, oil"
-      },
-      {
-        id: "batam",
-        icon: "🏭",
-        titleDA: "Batam",
-        titleEN: "Batam",
-        subtitleDA: "Riau Islands - produktion og shipping",
-        subtitleEN: "Riau Islands - manufacturing and shipping",
-        direction: "Batam, manufacturing, shipping"
-      },
-      {
-        id: "bogor",
-        icon: "🌿",
-        titleDA: "Bogor",
-        titleEN: "Bogor",
-        subtitleDA: "Vest Java - landbrug og forskning",
-        subtitleEN: "West Java - agriculture and research",
-        direction: "Bogor, agriculture, research"
-      },
-      {
-        id: "malang",
-        icon: "🏞️",
-        titleDA: "Malang",
-        titleEN: "Malang",
-        subtitleDA: "Øst Java - turisme og tech",
-        subtitleEN: "East Java - tourism and tech",
-        direction: "Malang, tourism, tech"
-      },
-      {
-        id: "manado",
-        icon: "🐠",
-        titleDA: "Manado",
-        titleEN: "Manado",
-        subtitleDA: "Nord Sulawesi - marine og turisme",
-        subtitleEN: "North Sulawesi - marine and tourism",
-        direction: "Manado, marine, diving"
-      },
-      {
-        id: "banjarmasin",
-        icon: "🛶",
-        titleDA: "Banjarmasin",
-        titleEN: "Banjarmasin",
-        subtitleDA: "Syd Kalimantan - flodhandel",
-        subtitleEN: "South Kalimantan - river trade",
-        direction: "Banjarmasin, river, trade"
-      },
-      {
-        id: "pekanbaru",
-        icon: "🌾",
-        titleDA: "Pekanbaru",
-        titleEN: "Pekanbaru",
-        subtitleDA: "Riau - palmeolie og landbrug",
-        subtitleEN: "Riau - palm oil and agriculture",
-        direction: "Pekanbaru, palm oil, agriculture"
-      },
-      {
-        id: "denpasar",
-        icon: "🌺",
-        titleDA: "Denpasar",
-        titleEN: "Denpasar",
-        subtitleDA: "Bali - hovedby og kultur",
-        subtitleEN: "Bali - main city and culture",
-        direction: "Denpasar, Bali, culture"
-      },
-      {
-        id: "pontianak",
-        icon: "🌉",
-        titleDA: "Pontianak",
-        titleEN: "Pontianak",
-        subtitleDA: "Vest Kalimantan - grænsehandel",
-        subtitleEN: "West Kalimantan - border trade",
-        direction: "Pontianak, border, trade"
-      },
-      {
-        id: "lombok",
-        icon: "🏖️",
-        titleDA: "Lombok",
-        titleEN: "Lombok",
-        subtitleDA: "Øturisme og udvikling",
-        subtitleEN: "Island tourism and development",
-        direction: "Lombok, tourism, island"
-      },
-      {
         id: "other",
-        icon: "🗺️",
+        icon: "�️",
         titleDA: "Anden By / Flere Steder",
         titleEN: "Other City / Multiple Locations",
         subtitleDA: "Jeg er interesseret i flere områder eller en anden by",

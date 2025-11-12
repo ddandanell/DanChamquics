@@ -63,8 +63,8 @@ export const quizQuestions: Question[] = [
   },
   {
     id: 2,
-    titleDA: "Hvordan beskriver du din forbindelse til DanCham?",
-    titleEN: "How do you describe your connection to DanCham?",
+    titleDA: "Hvordan beskriver du din forbindelse til Danmark og Indonesien?",
+    titleEN: "How do you describe your connection to Denmark and Indonesia?",
     iconHeader: "🌏",
     options: [
       {
@@ -132,8 +132,8 @@ export const quizQuestions: Question[] = [
       {
         id: "institutional",
         icon: "🎯",
-        titleDA: "Jeg Repræsenterer DanCham-Interesser",
-        titleEN: "I Represent DanCham Interests",
+        titleDA: "Jeg Repræsenterer Dansk-Indonesiske Interesser",
+        titleEN: "I Represent Danish-Indonesian Interests",
         subtitleDA: "Arbejder for ambassade, trade council, organisation eller dansk initiative",
         subtitleEN: "Work for embassy, trade council, organization or Danish initiative",
         direction: "Institutional, diplomatic, official representation"
@@ -239,15 +239,15 @@ export const quizQuestions: Question[] = [
   },
   {
     id: 6,
-    titleDA: "Baseret på hvad du ved (eller har hørt) - hvad tiltaler dig ved DanCham?",
-    titleEN: "Based on what you know (or have heard) - what appeals to you about DanCham?",
+    titleDA: "Hvad er vigtigst for dig i et dansk-indonesisk business-netværk?",
+    titleEN: "What's most important to you in a Danish-Indonesian business network?",
     iconHeader: "🎪",
     options: [
       {
         id: "bicultural-focus",
         icon: "🤝",
-        titleDA: "DanCham's Bikultur-Fokus",
-        titleEN: "DanCham's Bicultural Focus",
+        titleDA: "Forståelse For Begge Kulturer",
+        titleEN: "Understanding Of Both Cultures",
         subtitleDA: "Jeg vil være i et miljø der forstår både dansk og indonesisk business-kultur",
         subtitleEN: "I want to be in an environment that understands both Danish and Indonesian business culture",
         direction: "Cultural understanding, bicultural value, niche positioning"

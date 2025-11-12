@@ -47,11 +47,11 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-dancham-navy via-dancham-navy to-dancham-red">
       {/* Language Selector - Fixed Top Right */}
-      <div className="absolute top-4 right-4 z-50">
-        <div className="flex gap-2 bg-white/10 backdrop-blur-md rounded-full p-1">
+      <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50">
+        <div className="flex gap-1 sm:gap-2 bg-white/10 backdrop-blur-md rounded-full p-1">
           <button
             onClick={() => setLanguage('da')}
-            className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               language === 'da'
                 ? 'bg-white text-dancham-navy shadow-lg'
                 : 'text-white hover:bg-white/20'
@@ -61,7 +61,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
           </button>
           <button
             onClick={() => setLanguage('en')}
-            className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               language === 'en'
                 ? 'bg-white text-dancham-navy shadow-lg'
                 : 'text-white hover:bg-white/20'
@@ -92,9 +92,9 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
         }}
       />
 
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-8">
         {/* Flag Merge Animation */}
-        <motion.div className="mb-8">
+        <motion.div className="mb-6 sm:mb-8 scale-75 sm:scale-100">
           <FlagMerge />
         </motion.div>
 
@@ -106,7 +106,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             transition={{ delay: 2, duration: 0.8 }}
             className="text-center max-w-4xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 px-2">
               <TypewriterText text={text[language].headline} />
             </h1>
             
@@ -114,7 +114,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 3.5, duration: 0.8 }}
-              className="text-xl md:text-2xl text-white/90 mb-8"
+              className="text-base sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 px-2"
             >
               {text[language].subtitle}
             </motion.p>
@@ -125,7 +125,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 4, duration: 0.5 }}
               onClick={onStart}
-              className="group relative px-8 py-4 bg-dancham-red text-white text-xl font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
+              className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-dancham-red text-white text-lg sm:text-xl font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -198,9 +198,9 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
       </div>
 
       {/* Preview Section */}
-      <div className="relative z-10 bg-white/5 backdrop-blur-sm py-20 px-4">
+      <div className="relative z-10 bg-white/5 backdrop-blur-sm py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <PreviewCard
               icon="🎯"
               title={text[language].previewCards[0]}
@@ -226,10 +226,10 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
 // Flag Merge Component
 function FlagMerge() {
   return (
-    <div className="relative w-64 h-32">
+    <div className="relative w-48 h-24 sm:w-64 sm:h-32">
       {/* Danish Flag */}
       <motion.div
-        className="absolute left-0 w-24 h-16 bg-dancham-red rounded-lg shadow-2xl flex items-center justify-center text-4xl"
+        className="absolute left-0 w-16 h-12 sm:w-24 sm:h-16 bg-dancham-red rounded-lg shadow-2xl flex items-center justify-center text-2xl sm:text-4xl"
         initial={{ x: -200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -239,7 +239,7 @@ function FlagMerge() {
 
       {/* Indonesian Flag */}
       <motion.div
-        className="absolute right-0 w-24 h-16 bg-indonesian-red rounded-lg shadow-2xl flex items-center justify-center text-4xl"
+        className="absolute right-0 w-16 h-12 sm:w-24 sm:h-16 bg-indonesian-red rounded-lg shadow-2xl flex items-center justify-center text-2xl sm:text-4xl"
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -255,7 +255,7 @@ function FlagMerge() {
         transition={{ delay: 1.2, duration: 0.6, type: 'spring' }}
       >
         <motion.div
-          className="w-32 h-32 bg-white rounded-full shadow-2xl flex items-center justify-center text-6xl"
+          className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full shadow-2xl flex items-center justify-center text-4xl sm:text-6xl"
           animate={{
             y: [0, -10, 0],
           }}
@@ -340,10 +340,10 @@ function PreviewCard({ icon, title, delay }: { icon: string; title: string; dela
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.6 }}
-      className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105"
+      className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105"
     >
       <motion.div
-        className="text-6xl mb-4"
+        className="text-4xl sm:text-6xl mb-3 sm:mb-4"
         animate={{
           scale: [1, 1.1, 1],
         }}
@@ -355,7 +355,7 @@ function PreviewCard({ icon, title, delay }: { icon: string; title: string; dela
       >
         {icon}
       </motion.div>
-      <h3 className="text-white text-xl font-bold">{title}</h3>
+      <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">{title}</h3>
     </motion.div>
   )
 }

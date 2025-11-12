@@ -99,14 +99,14 @@ export default function ResultPage({ answers, leadData, language }: ResultPagePr
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', duration: 1 }}
-            className="mb-8"
+            className="mb-6 sm:mb-8"
           >
             <motion.div
               animate={{ y: [-5, 5, -5] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               className="inline-block"
             >
-              <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center text-6xl shadow-2xl mx-auto">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-full flex items-center justify-center text-4xl sm:text-6xl shadow-2xl mx-auto">
                 <motion.span
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
@@ -121,12 +121,13 @@ export default function ResultPage({ answers, leadData, language }: ResultPagePr
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
+            className="px-4"
           >
-            <p className="text-xl mb-2">{text[language].yourProfile}</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+            <p className="text-base sm:text-xl mb-2">{text[language].yourProfile}</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
               {language === 'da' ? profile.nameDA : profile.nameEN}
             </h1>
-            <p className="text-xl opacity-90">
+            <p className="text-base sm:text-lg md:text-xl opacity-90">
               {language === 'da' ? profile.taglineDA : profile.taglineEN}
             </p>
           </motion.div>
@@ -134,7 +135,7 @@ export default function ResultPage({ answers, leadData, language }: ResultPagePr
       </div>
 
       {/* Content Sections */}
-      <div className="max-w-4xl mx-auto px-4 py-12 space-y-12">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-8 sm:py-12 space-y-8 sm:space-y-12">
         {/* Who You Are */}
         <WhoYouAreSection profile={profile} language={language} text={text[language]} />
         
@@ -239,12 +240,12 @@ function WhoYouAreSection({ profile, language, text }: { profile: any; language:
       initial={{ opacity: 0, x: -50 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-lg"
+      className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
     >
-      <div className="border-b-4 border-dancham-red pb-2 mb-6">
-        <h2 className="text-3xl font-bold text-dancham-navy">{text.whoYouAre}</h2>
+      <div className="border-b-4 border-dancham-red pb-2 mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-dancham-navy">{text.whoYouAre}</h2>
       </div>
-      <p className="text-lg text-gray-700 leading-relaxed">
+      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
         {language === 'da' ? profile.whoYouAreDA : profile.whoYouAreEN}
       </p>
     </motion.section>
@@ -262,29 +263,29 @@ function BenefitsSection({ profile, language, text }: { profile: any; language: 
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-lg"
+      className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
     >
-      <div className="border-b-4 border-dancham-red pb-2 mb-6">
-        <h2 className="text-3xl font-bold text-dancham-navy">{text.whatYouGet}</h2>
+      <div className="border-b-4 border-dancham-red pb-2 mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-dancham-navy">{text.whatYouGet}</h2>
       </div>
-      <ul className="space-y-4">
+      <ul className="space-y-3 sm:space-y-4">
         {benefits.map((benefit: string, index: number) => (
           <motion.li
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: index * 0.15, duration: 0.5 }}
-            className="flex items-start gap-3"
+            className="flex items-start gap-2 sm:gap-3"
           >
             <motion.span
               initial={{ scale: 0 }}
               animate={inView ? { scale: 1 } : {}}
               transition={{ delay: index * 0.15 + 0.2, type: 'spring' }}
-              className="text-dancham-red text-2xl flex-shrink-0"
+              className="text-dancham-red text-xl sm:text-2xl flex-shrink-0"
             >
               ✓
             </motion.span>
-            <span className="text-gray-700 text-lg">{benefit}</span>
+            <span className="text-gray-700 text-sm sm:text-base md:text-lg">{benefit}</span>
           </motion.li>
         ))}
       </ul>
@@ -302,14 +303,14 @@ function WhoYouMeetSection({ profile, language, text }: { profile: any; language
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-lg"
+      className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
     >
-      <div className="border-b-4 border-dancham-red pb-2 mb-6">
-        <h2 className="text-3xl font-bold text-dancham-navy">{text.whoYouMeet}</h2>
+      <div className="border-b-4 border-dancham-red pb-2 mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-dancham-navy">{text.whoYouMeet}</h2>
       </div>
       
       {/* Avatar Grid */}
-      <div className="flex justify-center gap-3 mb-6 flex-wrap">
+      <div className="flex justify-center gap-2 sm:gap-3 mb-4 sm:mb-6 flex-wrap">
         {['👔', '💼', '🎯', '🌏', '🤝', '💡', '🚀', '📊'].map((emoji, index) => (
           <motion.div
             key={index}
@@ -317,14 +318,14 @@ function WhoYouMeetSection({ profile, language, text }: { profile: any; language
             animate={inView ? { scale: 1, rotate: 15 } : {}}
             transition={{ delay: index * 0.1, type: 'spring' }}
             whileHover={{ scale: 1.2, rotate: 0 }}
-            className="w-16 h-16 bg-gradient-to-br from-dancham-red to-indonesian-red rounded-full flex items-center justify-center text-2xl shadow-lg cursor-pointer"
+            className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-dancham-red to-indonesian-red rounded-full flex items-center justify-center text-xl sm:text-2xl shadow-lg cursor-pointer"
           >
             {emoji}
           </motion.div>
         ))}
       </div>
       
-      <p className="text-lg text-gray-700 leading-relaxed">
+      <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
         {language === 'da' ? profile.youWillMeetDA : profile.youWillMeetEN}
       </p>
     </motion.section>
@@ -347,35 +348,35 @@ function NextStepsSection({ profile, language, text }: { profile: any; language:
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-gradient-to-br from-dancham-navy to-dancham-red text-white rounded-2xl p-8 shadow-lg"
+      className="bg-gradient-to-br from-dancham-navy to-dancham-red text-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg"
     >
-      <div className="border-b-4 border-white pb-2 mb-6">
-        <h2 className="text-3xl font-bold">{text.nextSteps}</h2>
+      <div className="border-b-4 border-white pb-2 mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">{text.nextSteps}</h2>
       </div>
       
-      <div className="space-y-4 mb-8">
+      <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
         {nextSteps.map((step: string, index: number) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: index * 0.15, duration: 0.5 }}
-            className="flex items-start gap-4 bg-white/10 rounded-lg p-4"
+            className="flex items-start gap-3 sm:gap-4 bg-white/10 rounded-lg p-3 sm:p-4"
           >
-            <span className="flex-shrink-0 w-8 h-8 bg-white text-dancham-red rounded-full flex items-center justify-center font-bold">
+            <span className="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 bg-white text-dancham-red rounded-full flex items-center justify-center text-sm sm:text-base font-bold">
               {index + 1}
             </span>
-            <p className="text-lg">{step}</p>
+            <p className="text-sm sm:text-base md:text-lg">{step}</p>
           </motion.div>
         ))}
       </div>
       
       {/* CTA Buttons */}
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white text-dancham-red font-bold py-3 px-6 rounded-lg hover:shadow-xl transition-all"
+          className="bg-white text-dancham-red font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:shadow-xl transition-all text-sm sm:text-base"
         >
           {ctaText[language].events}
         </motion.button>
@@ -383,7 +384,7 @@ function NextStepsSection({ profile, language, text }: { profile: any; language:
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white/20 border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/30 transition-all"
+          className="bg-white/20 border-2 border-white text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-white/30 transition-all text-sm sm:text-base"
         >
           {ctaText[language].intro}
         </motion.button>
@@ -442,37 +443,37 @@ function MembershipSection({ profile, language, text }: { profile: any; language
       initial={{ opacity: 0, scale: 0.9 }}
       animate={inView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl p-8 shadow-lg border-4 border-dancham-red"
+      className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg border-4 border-dancham-red"
     >
-      <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-dancham-navy mb-2">{text.membership}</h2>
-        <p className="text-gray-600">{text.basedOnProfile}</p>
+      <div className="text-center mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-dancham-navy mb-2">{text.membership}</h2>
+        <p className="text-sm sm:text-base text-gray-600">{text.basedOnProfile}</p>
       </div>
       
-      <div className="bg-gradient-to-br from-dancham-red to-indonesian-red text-white rounded-xl p-8 shadow-xl">
-        <h3 className="text-2xl font-bold mb-4 text-center">
+      <div className="bg-gradient-to-br from-dancham-red to-indonesian-red text-white rounded-xl p-4 sm:p-6 md:p-8 shadow-xl">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-center">
           {profile.recommendedMembership === 'corporate' 
             ? membershipNames[language].corporate 
             : membershipNames[language].individual}
         </h3>
         
-        <ul className="space-y-2 mb-6">
+        <ul className="space-y-2 mb-4 sm:mb-6">
           {benefits[language].map((benefit, i) => (
-            <li key={i} className="flex items-center gap-2">✓ {benefit}</li>
+            <li key={i} className="flex items-center gap-2 text-sm sm:text-base">✓ {benefit}</li>
           ))}
         </ul>
         
-        <div className="text-center mb-6">
-          <p className="text-5xl font-bold mb-2">
+        <div className="text-center mb-4 sm:mb-6">
+          <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
             IDR {count.toLocaleString('id-ID')}
           </p>
-          <p className="text-white/80">{text.perYear}</p>
+          <p className="text-white/80 text-sm sm:text-base">{text.perYear}</p>
         </div>
         
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full bg-white text-dancham-red font-bold py-4 rounded-lg text-lg hover:shadow-xl transition-all"
+          className="w-full bg-white text-dancham-red font-bold py-3 sm:py-4 rounded-lg text-base sm:text-lg hover:shadow-xl transition-all"
         >
           {text.joinNow}
         </motion.button>
@@ -481,7 +482,7 @@ function MembershipSection({ profile, language, text }: { profile: any; language
           initial={{ scale: 0 }}
           animate={inView ? { scale: 1 } : {}}
           transition={{ delay: 0.5, type: 'spring' }}
-          className="mt-4 text-center bg-white/20 rounded-lg p-3"
+          className="mt-3 sm:mt-4 text-center bg-white/20 rounded-lg p-2.5 sm:p-3 text-sm sm:text-base"
         >
           {text.special}
         </motion.div>
@@ -505,21 +506,21 @@ function SocialShareSection({ profileName, leadData, language, text }: { profile
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className="bg-gray-100 rounded-2xl p-8 text-center"
+      className="bg-gray-100 rounded-2xl p-4 sm:p-6 md:p-8 text-center"
     >
-      <h2 className="text-2xl font-bold text-dancham-navy mb-4">
+      <h2 className="text-xl sm:text-2xl font-bold text-dancham-navy mb-3 sm:mb-4">
         {text.share}
       </h2>
-      <p className="text-gray-600 mb-6">
+      <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
         {text.shareSubtitle}
       </p>
       
-      <div className="flex justify-center gap-4 flex-wrap">
+      <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleCopyLink}
-          className="bg-dancham-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all"
+          className="bg-dancham-navy text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-opacity-90 transition-all"
         >
           {copied ? text.copied : text.copyLink}
         </motion.button>
@@ -527,7 +528,7 @@ function SocialShareSection({ profileName, leadData, language, text }: { profile
         <motion.button
           whileHover={{ scale: 1.05, rotate: 5 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+          className="bg-blue-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-all"
         >
           {text.shareLinkedIn}
         </motion.button>
@@ -535,7 +536,7 @@ function SocialShareSection({ profileName, leadData, language, text }: { profile
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all"
+          className="bg-gray-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-gray-700 transition-all"
         >
           {text.email}
         </motion.button>

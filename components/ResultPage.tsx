@@ -4,18 +4,15 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { matchProfile } from '@/data/profiles'
-import type { LeadData } from './LeadCapture'
-import Image from 'next/image'
 
 type Language = 'da' | 'en'
 
 interface ResultPageProps {
   answers: { questionId: number; answerId: string }[]
-  leadData: LeadData | null
   language: Language
 }
 
-export default function ResultPage({ answers, leadData, language }: ResultPageProps) {
+export default function ResultPage({ answers, language }: ResultPageProps) {
   const [loading, setLoading] = useState(true)
   const [confettiDone, setConfettiDone] = useState(false)
   const profile = matchProfile(answers)
@@ -152,7 +149,7 @@ export default function ResultPage({ answers, leadData, language }: ResultPagePr
         <MembershipSection profile={profile} language={language} text={text[language]} />
         
         {/* Social Sharing */}
-        <SocialShareSection profileName={language === 'da' ? profile.nameDA : profile.nameEN} leadData={leadData} language={language} text={text[language]} />
+        <SocialShareSection profileName={language === 'da' ? profile.nameDA : profile.nameEN} language={language} text={text[language]} />
       </div>
     </div>
   )
@@ -222,7 +219,7 @@ function LoadingScreen({ language }: { language: Language }) {
             exit={{ opacity: 0, y: -10 }}
             className="text-lg font-semibold"
           >
-            "{funFacts[funFact]}"
+            &ldquo;{funFacts[funFact]}&rdquo;
           </motion.p>
         </div>
       </div>
@@ -492,7 +489,7 @@ function MembershipSection({ profile, language, text }: { profile: any; language
 }
 
 // Social Share Section
-function SocialShareSection({ profileName, leadData, language, text }: { profileName: string; leadData: LeadData | null; language: Language; text: any }) {
+function SocialShareSection({ profileName, language, text }: { profileName: string; language: Language; text: any }) {
   const [copied, setCopied] = useState(false)
 
   const handleCopyLink = () => {

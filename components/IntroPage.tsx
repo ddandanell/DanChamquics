@@ -78,7 +78,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
           className="mb-8 sm:mb-12"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
         >
           <Image 
             src="/image.png" 
@@ -95,7 +95,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.3 }}
             className="text-center max-w-4xl"
           >
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dancham-navy mb-3 sm:mb-4 px-2">
@@ -105,7 +105,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 3.5, duration: 0.8 }}
+              transition={{ delay: 0.8, duration: 0.3 }}
               className="text-base sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 px-2"
             >
               {text[language].subtitle}
@@ -115,7 +115,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 4, duration: 0.5 }}
+              transition={{ delay: 1, duration: 0.3 }}
               onClick={onStart}
               className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-dancham-red text-white text-lg sm:text-xl font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105"
               whileHover={{ scale: 1.05 }}
@@ -149,7 +149,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 5, duration: 0.8 }}
+              transition={{ delay: 1.2, duration: 0.3 }}
               className="mt-16"
             >
               <motion.div
@@ -277,7 +277,7 @@ function TypewriterText({ text }: { text: string }) {
       } else {
         clearInterval(interval)
       }
-    }, 50)
+    }, 20)
     
     return () => clearInterval(interval)
   }, [text])

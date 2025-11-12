@@ -21,7 +21,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
 
   const text = {
     da: {
-      headline: "Hvad kan dansk-indonesisk business gøre for dig?",
+      headline: "Hvad kan DanCham gøre for dig?",
       subtitle: "6 spørgsmål · 2 minutter · Dit unikke match",
       cta: "🚀 Start Din Rejse",
       scroll: "Scroll for at se hvordan det virker",
@@ -32,7 +32,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
       ]
     },
     en: {
-      headline: "What can Danish-Indonesian business do for you?",
+      headline: "What can DanCham do for you?",
       subtitle: "6 questions · 2 minutes · Your unique match",
       cta: "🚀 Start Your Journey",
       scroll: "Scroll to see how it works",

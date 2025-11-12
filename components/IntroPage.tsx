@@ -22,22 +22,22 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
   const text = {
     da: {
       headline: "Hvad kan DanCham gøre for dig?",
-      subtitle: "6 spørgsmål · 2 minutter · Dit unikke match",
+      subtitle: "7 spørgsmål · 2 minutter · Dit unikke match",
       cta: "🚀 Start Din Rejse",
       scroll: "Scroll for at se hvordan det virker",
       previewCards: [
-        "6 Smarte Spørgsmål",
+        "7 Smarte Spørgsmål",
         "Din Personlige Profil",
         "Konkrete Næste Skridt"
       ]
     },
     en: {
       headline: "What can DanCham do for you?",
-      subtitle: "6 questions · 2 minutes · Your unique match",
+      subtitle: "7 questions · 2 minutes · Your unique match",
       cta: "🚀 Start Your Journey",
       scroll: "Scroll to see how it works",
       previewCards: [
-        "6 Smart Questions",
+        "7 Smart Questions",
         "Your Personal Profile",
         "Concrete Next Steps"
       ]

@@ -280,5 +280,193 @@ export const quizQuestions: Question[] = [
         direction: "Institutional access, official connections, Danish gateway"
       }
     ]
+  },
+  {
+    id: 7,
+    titleDA: "Hvilken del af Indonesien er du interesseret i eller placeret i?",
+    titleEN: "Which part of Indonesia are you interested in or located in?",
+    iconHeader: "📍",
+    options: [
+      {
+        id: "jakarta",
+        icon: "🏙️",
+        titleDA: "Jakarta",
+        titleEN: "Jakarta",
+        subtitleDA: "Hovedstaden og business-centrum",
+        subtitleEN: "Capital city and business hub",
+        direction: "Jakarta, capital, business center"
+      },
+      {
+        id: "surabaya",
+        icon: "🏭",
+        titleDA: "Surabaya",
+        titleEN: "Surabaya",
+        subtitleDA: "Øst Java - industri og handel",
+        subtitleEN: "East Java - industry and trade",
+        direction: "Surabaya, East Java, industrial"
+      },
+      {
+        id: "bandung",
+        icon: "🏔️",
+        titleDA: "Bandung",
+        titleEN: "Bandung",
+        subtitleDA: "Vest Java - tech og kreativ industri",
+        subtitleEN: "West Java - tech and creative industry",
+        direction: "Bandung, West Java, tech hub"
+      },
+      {
+        id: "bali",
+        icon: "🏝️",
+        titleDA: "Bali",
+        titleEN: "Bali",
+        subtitleDA: "Turisme, hospitality og digital nomader",
+        subtitleEN: "Tourism, hospitality and digital nomads",
+        direction: "Bali, tourism, lifestyle"
+      },
+      {
+        id: "semarang",
+        icon: "🚢",
+        titleDA: "Semarang",
+        titleEN: "Semarang",
+        subtitleDA: "Central Java - havn og logistik",
+        subtitleEN: "Central Java - port and logistics",
+        direction: "Semarang, Central Java, logistics"
+      },
+      {
+        id: "medan",
+        icon: "🌴",
+        titleDA: "Medan",
+        titleEN: "Medan",
+        subtitleDA: "Nord Sumatra - handel og landbrug",
+        subtitleEN: "North Sumatra - trade and agriculture",
+        direction: "Medan, Sumatra, agriculture"
+      },
+      {
+        id: "makassar",
+        icon: "⚓",
+        titleDA: "Makassar",
+        titleEN: "Makassar",
+        subtitleDA: "Syd Sulawesi - maritime og handel",
+        subtitleEN: "South Sulawesi - maritime and trade",
+        direction: "Makassar, Sulawesi, maritime"
+      },
+      {
+        id: "palembang",
+        icon: "🛢️",
+        titleDA: "Palembang",
+        titleEN: "Palembang",
+        subtitleDA: "Syd Sumatra - energi og ressourcer",
+        subtitleEN: "South Sumatra - energy and resources",
+        direction: "Palembang, Sumatra, energy"
+      },
+      {
+        id: "yogyakarta",
+        icon: "🏛️",
+        titleDA: "Yogyakarta",
+        titleEN: "Yogyakarta",
+        subtitleDA: "Kulturelt centrum og uddannelse",
+        subtitleEN: "Cultural center and education",
+        direction: "Yogyakarta, culture, education"
+      },
+      {
+        id: "balikpapan",
+        icon: "🏗️",
+        titleDA: "Balikpapan",
+        titleEN: "Balikpapan",
+        subtitleDA: "Øst Kalimantan - olie og gas",
+        subtitleEN: "East Kalimantan - oil and gas",
+        direction: "Balikpapan, Kalimantan, oil"
+      },
+      {
+        id: "batam",
+        icon: "🏭",
+        titleDA: "Batam",
+        titleEN: "Batam",
+        subtitleDA: "Riau Islands - produktion og shipping",
+        subtitleEN: "Riau Islands - manufacturing and shipping",
+        direction: "Batam, manufacturing, shipping"
+      },
+      {
+        id: "bogor",
+        icon: "🌿",
+        titleDA: "Bogor",
+        titleEN: "Bogor",
+        subtitleDA: "Vest Java - landbrug og forskning",
+        subtitleEN: "West Java - agriculture and research",
+        direction: "Bogor, agriculture, research"
+      },
+      {
+        id: "malang",
+        icon: "🏞️",
+        titleDA: "Malang",
+        titleEN: "Malang",
+        subtitleDA: "Øst Java - turisme og tech",
+        subtitleEN: "East Java - tourism and tech",
+        direction: "Malang, tourism, tech"
+      },
+      {
+        id: "manado",
+        icon: "🐠",
+        titleDA: "Manado",
+        titleEN: "Manado",
+        subtitleDA: "Nord Sulawesi - marine og turisme",
+        subtitleEN: "North Sulawesi - marine and tourism",
+        direction: "Manado, marine, diving"
+      },
+      {
+        id: "banjarmasin",
+        icon: "🛶",
+        titleDA: "Banjarmasin",
+        titleEN: "Banjarmasin",
+        subtitleDA: "Syd Kalimantan - flodhandel",
+        subtitleEN: "South Kalimantan - river trade",
+        direction: "Banjarmasin, river, trade"
+      },
+      {
+        id: "pekanbaru",
+        icon: "🌾",
+        titleDA: "Pekanbaru",
+        titleEN: "Pekanbaru",
+        subtitleDA: "Riau - palmeolie og landbrug",
+        subtitleEN: "Riau - palm oil and agriculture",
+        direction: "Pekanbaru, palm oil, agriculture"
+      },
+      {
+        id: "denpasar",
+        icon: "🌺",
+        titleDA: "Denpasar",
+        titleEN: "Denpasar",
+        subtitleDA: "Bali - hovedby og kultur",
+        subtitleEN: "Bali - main city and culture",
+        direction: "Denpasar, Bali, culture"
+      },
+      {
+        id: "pontianak",
+        icon: "🌉",
+        titleDA: "Pontianak",
+        titleEN: "Pontianak",
+        subtitleDA: "Vest Kalimantan - grænsehandel",
+        subtitleEN: "West Kalimantan - border trade",
+        direction: "Pontianak, border, trade"
+      },
+      {
+        id: "lombok",
+        icon: "🏖️",
+        titleDA: "Lombok",
+        titleEN: "Lombok",
+        subtitleDA: "Øturisme og udvikling",
+        subtitleEN: "Island tourism and development",
+        direction: "Lombok, tourism, island"
+      },
+      {
+        id: "other",
+        icon: "🗺️",
+        titleDA: "Anden By / Flere Steder",
+        titleEN: "Other City / Multiple Locations",
+        subtitleDA: "Jeg er interesseret i flere områder eller en anden by",
+        subtitleEN: "I'm interested in multiple areas or another city",
+        direction: "Other, multiple, flexible"
+      }
+    ]
   }
 ]

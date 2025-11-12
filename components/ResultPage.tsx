@@ -7,12 +7,18 @@ import { matchProfile } from '@/data/profiles'
 
 type Language = 'da' | 'en'
 
+interface ContactData {
+  name: string
+  email: string
+}
+
 interface ResultPageProps {
   answers: { questionId: number; answerId: string }[]
+  contactData: ContactData
   language: Language
 }
 
-export default function ResultPage({ answers, language }: ResultPageProps) {
+export default function ResultPage({ answers, contactData, language }: ResultPageProps) {
   const [loading, setLoading] = useState(true)
   const [confettiDone, setConfettiDone] = useState(false)
   const profile = matchProfile(answers)

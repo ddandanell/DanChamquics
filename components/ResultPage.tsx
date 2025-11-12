@@ -16,9 +16,10 @@ interface ResultPageProps {
   answers: { questionId: number; answerId: string }[]
   contactData: ContactData
   language: Language
+  setLanguage: (lang: Language) => void
 }
 
-export default function ResultPage({ answers, contactData, language }: ResultPageProps) {
+export default function ResultPage({ answers, contactData, language, setLanguage }: ResultPageProps) {
   const [loading, setLoading] = useState(true)
   const [confettiDone, setConfettiDone] = useState(false)
   const profile = matchProfile(answers)
@@ -92,6 +93,32 @@ export default function ResultPage({ answers, contactData, language }: ResultPag
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Language Selector - Fixed Top Right */}
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
+        <div className="flex gap-1 sm:gap-2 bg-white/90 backdrop-blur-md rounded-full p-1 shadow-lg">
+          <button
+            onClick={() => setLanguage('da')}
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+              language === 'da'
+                ? 'bg-dancham-navy text-white shadow-lg'
+                : 'text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            🇩🇰 DA
+          </button>
+          <button
+            onClick={() => setLanguage('en')}
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+              language === 'en'
+                ? 'bg-dancham-navy text-white shadow-lg'
+                : 'text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            🇬🇧 EN
+          </button>
+        </div>
+      </div>
+
       {/* Header Section */}
       <div className="bg-gradient-to-br from-dancham-navy via-dancham-red to-indonesian-red text-white py-20 px-4 relative overflow-hidden">
         {confettiDone && <FloatingConfetti />}

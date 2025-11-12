@@ -41,9 +41,9 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {stage === 'intro' && <IntroPage onStart={handleStartQuiz} language={language} setLanguage={setLanguage} />}
-      {stage === 'quiz' && <QuizFlow onComplete={handleQuizComplete} language={language} />}
-      {stage === 'contact' && <ContactForm onSubmit={handleContactSubmit} language={language} />}
-      {stage === 'result' && <ResultPage answers={answers} contactData={contactData} language={language} />}
+      {stage === 'quiz' && <QuizFlow onComplete={handleQuizComplete} language={language} setLanguage={setLanguage} />}
+      {stage === 'contact' && <ContactForm onSubmit={handleContactSubmit} language={language} setLanguage={setLanguage} />}
+      {stage === 'result' && <ResultPage answers={answers} contactData={contactData} language={language} setLanguage={setLanguage} />}
     </main>
   )
 }

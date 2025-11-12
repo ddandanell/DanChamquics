@@ -8,9 +8,10 @@ type Language = 'da' | 'en'
 interface ContactFormProps {
   onSubmit: (name: string, email: string) => void
   language: Language
+  setLanguage: (lang: Language) => void
 }
 
-export default function ContactForm({ onSubmit, language }: ContactFormProps) {
+export default function ContactForm({ onSubmit, language, setLanguage }: ContactFormProps) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
@@ -59,6 +60,32 @@ export default function ContactForm({ onSubmit, language }: ContactFormProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-dancham-navy via-dancham-navy to-dancham-red flex items-center justify-center px-4 py-8">
+      {/* Language Selector - Fixed Top Right */}
+      <div className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50">
+        <div className="flex gap-1 sm:gap-2 bg-white/10 backdrop-blur-md rounded-full p-1">
+          <button
+            onClick={() => setLanguage('da')}
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+              language === 'da'
+                ? 'bg-white text-dancham-navy shadow-lg'
+                : 'text-white hover:bg-white/20'
+            }`}
+          >
+            🇩🇰 DA
+          </button>
+          <button
+            onClick={() => setLanguage('en')}
+            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
+              language === 'en'
+                ? 'bg-white text-dancham-navy shadow-lg'
+                : 'text-white hover:bg-white/20'
+            }`}
+          >
+            🇬🇧 EN
+          </button>
+        </div>
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

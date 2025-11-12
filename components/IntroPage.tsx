@@ -45,16 +45,16 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
   }
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-dancham-navy via-dancham-navy to-dancham-red">
+    <div className="min-h-screen relative overflow-hidden bg-white">
       {/* Language Selector - Fixed Top Right */}
       <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-50">
-        <div className="flex gap-1 sm:gap-2 bg-white/10 backdrop-blur-md rounded-full p-1">
+        <div className="flex gap-1 sm:gap-2 bg-gray-100 rounded-full p-1">
           <button
             onClick={() => setLanguage('da')}
             className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               language === 'da'
-                ? 'bg-white text-dancham-navy shadow-lg'
-                : 'text-white hover:bg-white/20'
+                ? 'bg-dancham-navy text-white shadow-lg'
+                : 'text-gray-700 hover:bg-gray-200'
             }`}
           >
             🇩🇰 DA
@@ -63,39 +63,31 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             onClick={() => setLanguage('en')}
             className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
               language === 'en'
-                ? 'bg-white text-dancham-navy shadow-lg'
-                : 'text-white hover:bg-white/20'
+                ? 'bg-dancham-navy text-white shadow-lg'
+                : 'text-gray-700 hover:bg-gray-200'
             }`}
           >
             🇬🇧 EN
           </button>
         </div>
       </div>
-      {/* Floating Particles */}
-      <FloatingParticles />
-      
-      {/* Animated Background Gradient */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        animate={{
-          background: [
-            'radial-gradient(circle at 0% 0%, #C60C30 0%, transparent 50%)',
-            'radial-gradient(circle at 100% 100%, #FF0000 0%, transparent 50%)',
-            'radial-gradient(circle at 0% 100%, #C60C30 0%, transparent 50%)',
-            'radial-gradient(circle at 100% 0%, #FF0000 0%, transparent 50%)',
-          ],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear',
-        }}
-      />
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-8">
-        {/* Flag Merge Animation */}
-        <motion.div className="mb-6 sm:mb-8 scale-75 sm:scale-100">
-          <FlagMerge />
+        {/* DanCham Logo */}
+        <motion.div 
+          className="mb-8 sm:mb-12"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Image 
+            src="/image.png" 
+            alt="DanCham Logo" 
+            width={300} 
+            height={100} 
+            className="w-48 sm:w-64 md:w-80 h-auto"
+            priority
+          />
         </motion.div>
 
         {/* Headline with Typewriter Effect */}
@@ -106,7 +98,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
             transition={{ delay: 2, duration: 0.8 }}
             className="text-center max-w-4xl"
           >
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 px-2">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-dancham-navy mb-3 sm:mb-4 px-2">
               <TypewriterText text={text[language].headline} />
             </h1>
             
@@ -114,7 +106,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 3.5, duration: 0.8 }}
-              className="text-base sm:text-xl md:text-2xl text-white/90 mb-6 sm:mb-8 px-2"
+              className="text-base sm:text-xl md:text-2xl text-gray-700 mb-6 sm:mb-8 px-2"
             >
               {text[language].subtitle}
             </motion.p>
@@ -166,7 +158,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
                   duration: 2,
                   repeat: Infinity,
                 }}
-                className="text-white/70 text-sm"
+                className="text-gray-500 text-sm"
               >
                 <div className="flex flex-col items-center gap-2">
                   <span>{text[language].scroll}</span>
@@ -198,7 +190,7 @@ export default function IntroPage({ onStart, language, setLanguage }: IntroPageP
       </div>
 
       {/* Preview Section */}
-      <div className="relative z-10 bg-white/5 backdrop-blur-sm py-12 sm:py-16 md:py-20 px-4">
+      <div className="relative z-10 bg-gray-50 py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <PreviewCard
@@ -340,7 +332,7 @@ function PreviewCard({ icon, title, delay }: { icon: string; title: string; dela
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.6 }}
-      className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105"
+      className="bg-white rounded-xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100"
     >
       <motion.div
         className="text-4xl sm:text-6xl mb-3 sm:mb-4"
@@ -355,7 +347,7 @@ function PreviewCard({ icon, title, delay }: { icon: string; title: string; dela
       >
         {icon}
       </motion.div>
-      <h3 className="text-white text-base sm:text-lg md:text-xl font-bold">{title}</h3>
+      <h3 className="text-dancham-navy text-base sm:text-lg md:text-xl font-bold">{title}</h3>
     </motion.div>
   )
 }
